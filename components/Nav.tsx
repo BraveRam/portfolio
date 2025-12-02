@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -22,6 +23,8 @@ export default function Nav() {
           <a href="#contact" className="hover:opacity-80">
             Contact
           </a>
+          <AnimatedThemeToggler />
+
         </div>
 
         {/* Mobile toggle */}
@@ -48,6 +51,8 @@ export default function Nav() {
               <a href="#skills" className="py-2">Skills</a>
               <a href="#projects" className="py-2">Projects</a>
               <a href="#contact" className="py-2">Contact</a>
+              <AnimatedThemeToggler />
+
             </div>
           </motion.div>
         )}

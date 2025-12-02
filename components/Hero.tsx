@@ -4,7 +4,7 @@ import { ArrowRight, Download } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="home" className="container pt-20 pb-10">
+    <section id="home" className="container pt-20 pb-1">
       <div className="grid items-center gap-8 md:grid-cols-[1.2fr_1fr] mt-10">
         <div>
           <motion.h1
@@ -13,7 +13,7 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight"
           >
-            👋 Hi, I'm Lencho.
+            👋 Hi, Lencho here.
           </motion.h1>
           <motion.h2
             initial={{ opacity: 0, y: 24 }}
