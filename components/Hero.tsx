@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -13,7 +13,7 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight"
           >
-            👋 Hi, I’m Lencho.
+            👋 Hi, I'm Lencho.
           </motion.h1>
           <motion.h2
             initial={{ opacity: 0, y: 24 }}
@@ -50,6 +50,13 @@ export default function Hero() {
               className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium border border-black/10 dark:border-white/15 hover:bg-black/5 dark:hover:bg-white/5 transition"
             >
               Contact
+            </a>
+            <a
+              href="/lencho-cv.pdf"
+              download="Lencho-Mengistu-CV.pdf"
+              className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium border border-black/10 dark:border-white/15 hover:bg-black/5 dark:hover:bg-white/5 transition"
+            >
+              <Download size={18} /> CV
             </a>
           </motion.div>
         </div>
