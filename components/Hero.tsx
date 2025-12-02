@@ -43,7 +43,7 @@ export default function Hero() {
               href="#projects"
               className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium bg-foreground text-background hover:opacity-90 transition"
             >
-              View Projects <ArrowRight size={18} />
+              Projects <ArrowRight size={18} />
             </a>
             <a
               href="#contact"
