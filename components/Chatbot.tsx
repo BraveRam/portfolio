@@ -142,7 +142,7 @@ export default function Chatbot() {
                                                                                 {...props}
                                                                                 target="_blank"
                                                                                 rel="noopener noreferrer"
-                                                                                className="text-blue-400 hover:text-blue-300 underline"
+                                                                                className="text-blue-400 hover:text-blue-300 underline break-all"
                                                                             />
                                                                         ),
                                                                         code: ({ node, className, children, ...props }) => {
