@@ -29,9 +29,9 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             className="mt-4 text-zinc-500 dark:text-zinc-400 max-w-xl"
           >
-            Self‑taught developer focused on fast and clean
-            code. I specialize in Next.js apps, Telegram bots, automation tools,
-            and AI‑powered software.
+            Self‑taught developer focused on fast and clean code. I specialize
+            in building websites, Telegram bots, automation tools, and
+            AI‑powered software.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 8 }}

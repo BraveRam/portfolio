@@ -6,7 +6,7 @@ export default function Skills() {
   return (
     <section id="skills" className="container py-16">
       <h2 className="text-2xl font-semibold tracking-tight mb-6 mt-15">
-        My skills
+        Skills
       </h2>
       <motion.div
         initial={{ opacity: 0 }}
@@ -15,7 +15,13 @@ export default function Skills() {
         className="grid gap-3 grid-cols-4 sm:grid-cols-6 lg:grid-cols-8"
       >
         {skills.map((skill: Skill) => {
-          const needsLightBg = ['vercel', 'rust', 'nextjs', 'express', 'openai'].includes(skill.slug);
+          const needsLightBg = [
+            "vercel",
+            "rust",
+            "nextjs",
+            "express",
+            "openai",
+          ].includes(skill.slug);
 
           return (
             <motion.div
@@ -24,8 +30,11 @@ export default function Skills() {
               transition={{ type: "spring", stiffness: 320, damping: 22 }}
               className="card rounded-xl p-3 flex flex-col items-center justify-center gap-2 h-24"
             >
-              <div className={`h-7 w-7 flex items-center justify-center rounded-md ${needsLightBg ? 'dark:bg-white/90 p-1' : ''
-                }`}>
+              <div
+                className={`h-7 w-7 flex items-center justify-center rounded-md ${
+                  needsLightBg ? "dark:bg-white/90 p-1" : ""
+                }`}
+              >
                 <img
                   src={`/icons/${skill.slug}.svg`}
                   alt={skill.name}
