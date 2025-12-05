@@ -10,7 +10,7 @@ export default function Nav() {
     <header className="sticky top-0 z-50 backdrop-blur supports-backdrop-filter:bg-background/60 border-b border-black/5 dark:border-white/10">
       <nav className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
         <a href="#home" className="font-semibold tracking-tight">
-          plxor.dev
+          Lencho Mengistu
         </a>
         <div className="hidden md:flex items-center gap-4 text-sm">
           <a href="#skills" className="hover:opacity-80">
