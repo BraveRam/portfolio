@@ -80,7 +80,7 @@ export default function Contact() {
           </a>
           <a
             className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border border-black/10 dark:border-white/15 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
-            href="https://linkedin.com/in/lencho-mengistu"
+            href="https://www.linkedin.com/in/lencho-mengistu-1a2642357"
             target="_blank"
             rel="noreferrer"
           >
