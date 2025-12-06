@@ -30,7 +30,7 @@ export default function Hero() {
             className="mt-4 text-zinc-500 dark:text-zinc-400 max-w-xl"
           >
             Self‑taught developer focused on fast and clean
-            code. I specialize in Next.js apps, Telegram bots, automation tools,
+            code. I specialize in web apps, Telegram bots, automation tools,
             and AI‑powered software.
           </motion.p>
           <motion.div
