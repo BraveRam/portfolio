@@ -13,8 +13,23 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight"
           >
-            👋 Hi, Lencho here.
+            <motion.span
+              className="inline-block origin-bottom"
+              animate={{
+                rotate: [0, 15, -10, 15, 0],
+              }}
+              transition={{
+                duration: 1.2,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatDelay: 0.3
+              }}
+            >
+              👋
+            </motion.span>{" "}
+            Hi, Lencho here.
           </motion.h1>
+
           <motion.h2
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,6 +76,6 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }

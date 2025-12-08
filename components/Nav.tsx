@@ -202,18 +202,20 @@ function ActualNav({ isScrolled, open, setOpen, activeTab, setActiveTab }: any) 
             className="absolute top-full left-0 right-0 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-black/5 dark:border-white/10 shadow-xl overflow-hidden z-40"
           >
             <div className="flex flex-col p-4 gap-2">
-              {navItems.map((item) => {
-                return (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
-                  >
-                    <span className="font-medium">{item.name}</span>
-                  </a>
-                )
-              })}
+              {navItems
+                .filter((item) => item.name !== "Lencho")
+                .map((item) => {
+                  return (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+                    >
+                      <span className="font-medium">{item.name}</span>
+                    </a>
+                  )
+                })}
             </div>
           </motion.div>
         )}
