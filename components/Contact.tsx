@@ -42,7 +42,7 @@ export default function Contact() {
           </a>
           <button
             onClick={handleCopy}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border border-black/10 dark:border-white/15 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+            className="inline-flex cursor-pointer items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border border-black/10 dark:border-white/15 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
           >
             {copied ? (
               <>
