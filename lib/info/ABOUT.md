@@ -15,7 +15,7 @@ I'm a **self-taught software developer** passionate about building fast, reliabl
 ---
 
 ## 🧰 Tech Stack
-**Languages & Frameworks:** TypeScript, JavaScript, Python, Rust (learning), React, React Native, Next.js, Express, Flask, Hono etc.
+**Languages & Frameworks:** TypeScript, JavaScript, Python, Rust, React, React Native, Next.js, Express, Flask, Hono etc.
 **AI & ML:** OpenAI APIs, Google Gemini APIs, machine learning models, AI integration in apps and bots  
 **Styling & UI:** TailwindCSS, Shadcn, bootstrap, etc  
 **Tools & Platforms:** Vercel, Digital Ocean, Koyeb, Netlify, Railway, Heroku, Linux, APIs, Automation, etc  
