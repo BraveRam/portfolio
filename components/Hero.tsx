@@ -1,11 +1,33 @@
 "use client";
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
+import LiquidEther from "./LiquidEther";
 
 export default function Hero() {
   return (
-    <section id="home" className="container pt-20 pb-1">
-      <div className="grid items-center gap-8 md:grid-cols-[1.2fr_1fr] mt-10">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-16 snap-start relative overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+          <LiquidEther
+            colors={['#5227FF', '#FF9FFC', '#B19EEF']}
+            mouseForce={20}
+            cursorSize={100}
+            isViscous={false}
+            viscous={30}
+            iterationsViscous={32}
+            iterationsPoisson={32}
+            resolution={0.5}
+            isBounce={false}
+            autoDemo={true}
+            autoSpeed={0.5}
+            autoIntensity={2.2}
+            takeoverDuration={0.25}
+            autoResumeDelay={3000}
+            autoRampDuration={0.6}
+          />
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto gap-8 relative z-10">
         <div>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
@@ -36,7 +58,7 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-2xl/tight sm:text-2xl/tight font-normal tracking-tight"
           >
-            A fullstack software developer
+            Full-stack software developer from 🇪🇹
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 24 }}
@@ -52,7 +74,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-8 flex items-center gap-3"
+            className="mt-8 flex items-center justify-center gap-3"
           >
             <a
               href="#projects"

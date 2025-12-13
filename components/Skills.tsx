@@ -4,9 +4,9 @@ import { skills, type Skill } from "@/lib/data";
 
 export default function Skills() {
   return (
-    <section id="skills" className="container py-16">
+    <section id="skills" className="container py-16 snap-start">
       <h2 className="text-2xl font-semibold tracking-tight mb-6 mt-15">
-        My skills
+        Skills
       </h2>
       <motion.div
         initial={{ opacity: 0 }}
@@ -22,17 +22,17 @@ export default function Skills() {
               key={skill.slug}
               whileHover={{ y: -4 }}
               transition={{ type: "spring", stiffness: 320, damping: 22 }}
-              className="card rounded-xl p-3 flex flex-col items-center justify-center gap-2 h-24"
+              className="card rounded-xl p-3 flex flex-col items-center justify-center gap-2 h-24 relative group"
             >
-              <div className={`h-7 w-7 flex items-center justify-center rounded-md ${needsLightBg ? 'dark:bg-white/90 p-1' : ''
-                }`}>
+              <div className={`h-8 w-8 flex items-center justify-center rounded-md ${needsLightBg ? 'dark:bg-white/90 p-1' : ''
+                } transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-2`}>
                 <img
                   src={`/icons/${skill.slug}.svg`}
                   alt={skill.name}
                   className="h-full w-full object-contain"
                 />
               </div>
-              <span className="text-xs font-medium tracking-tight text-foreground/90">
+              <span className="text-xs font-medium tracking-tight text-foreground/90 absolute bottom-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                 {skill.name}
               </span>
             </motion.div>

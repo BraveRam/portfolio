@@ -16,7 +16,7 @@ const item = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="container py-16">
+    <section id="projects" className="container py-16 snap-start">
       <div className="flex items-end justify-between mb-6 mt-20">
         <h2 className="text-2xl font-semibold tracking-tight">
           Projects
@@ -52,7 +52,7 @@ export default function Projects() {
                   alt={p.title}
                   width={1200}
                   height={630}
-                  className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                  className="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   priority={false}
                 />
@@ -66,7 +66,7 @@ export default function Projects() {
                         href={p.repo}
                         target="_blank"
                         rel="noreferrer"
-                        className="hover:text-foreground text-white z-10"
+                        className="hover:text-foreground text-zinc-600 dark:text-zinc-400 z-10"
                         onClick={(e) => e.stopPropagation()}
                       >
                         <Github size={18} />

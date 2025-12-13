@@ -19,7 +19,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="container py-16">
+    <section id="contact" className="container py-16 snap-start">
       <div className="glass rounded-2xl p-6 mt-20">
         <motion.h2
           initial={{ opacity: 0, y: 10 }}
