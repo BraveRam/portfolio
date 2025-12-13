@@ -12,6 +12,7 @@
     "@ai-sdk/google": "^2.0.44",
     "@ai-sdk/groq": "^2.0.32",
     "@ai-sdk/react": "^2.0.105",
+    "@types/three": "^0.182.0",
     "@upstash/ratelimit": "^2.0.7",
     "@upstash/redis": "^1.35.7",
     "ai": "^5.0.105",
