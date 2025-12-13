@@ -30,7 +30,7 @@ export const projects: Project[] = [
   {
     slug: "pupilfy",
     title: "Pupilfy",
-    description: "Simple file sharing with secure uploads and quick previews.",
+    description: "Awesome file sharing with secure uploads and quick previews.",
     tags: ["Next.js", "Backblaze", "TypeScript", "TailwindCSS", "NeonDB"],
     image: "/projects/pupilfy.png",
     site: "http://pupilfy.vercel.app"
