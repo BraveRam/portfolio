@@ -43,7 +43,17 @@ export default function Nav() {
   );
 }
 
-function ActualNav({ isScrolled, open, setOpen, activeTab, setActiveTab }: any) {
+
+
+interface ActualNavProps {
+  isScrolled: boolean;
+  open: boolean;
+  setOpen: (open: boolean) => void;
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+}
+
+function ActualNav({ isScrolled, open, setOpen, activeTab, setActiveTab }: ActualNavProps) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -223,45 +233,3 @@ function ActualNav({ isScrolled, open, setOpen, activeTab, setActiveTab }: any) 
     </motion.div>
   );
 }
-
-const MenuToggle = ({ open }: { open: boolean }) => (
-  <svg width="24" height="24" viewBox="0 0 24 24" className="text-foreground">
-    <motion.path
-      fill="transparent"
-      strokeWidth="2"
-      stroke="currentColor"
-      strokeLinecap="round"
-      variants={{
-        closed: { d: "M4 6h16" },
-        open: { d: "M6 18L18 6" }
-      }}
-      animate={open ? "open" : "closed"}
-      transition={{ type: "spring", stiffness: 260, damping: 20 }}
-    />
-    <motion.path
-      fill="transparent"
-      strokeWidth="2"
-      stroke="currentColor"
-      strokeLinecap="round"
-      d="M4 12h16"
-      variants={{
-        closed: { opacity: 1 },
-        open: { opacity: 0 }
-      }}
-      transition={{ duration: 0.1 }}
-      animate={open ? "open" : "closed"}
-    />
-    <motion.path
-      fill="transparent"
-      strokeWidth="2"
-      stroke="currentColor"
-      strokeLinecap="round"
-      variants={{
-        closed: { d: "M4 18h16" },
-        open: { d: "M6 6L18 18" }
-      }}
-      animate={open ? "open" : "closed"}
-      transition={{ type: "spring", stiffness: 260, damping: 20 }}
-    />
-  </svg>
-);

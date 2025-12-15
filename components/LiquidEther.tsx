@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any, react-hooks/unsupported-syntax */
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 

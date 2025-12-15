@@ -33,7 +33,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight"
+            className="text-4xl/tight sm:text-5xl/tight font-extrabold tracking-tight"
           >
             <motion.span
               className="inline-block origin-bottom"
@@ -56,7 +56,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-2xl/tight sm:text-2xl/tight font-normal tracking-tight"
+            className="text-2xl/tight sm:text-2xl/tight font-semibold tracking-tight"
           >
             Full-stack software developer from 🇪🇹
           </motion.h2>
@@ -78,20 +78,20 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium bg-foreground text-background hover:opacity-90 transition"
+              className="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium bg-foreground text-background hover:opacity-90 transition"
             >
               Projects <ArrowRight size={18} />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium border border-black/10 dark:border-white/15 hover:bg-black/5 dark:hover:bg-white/5 transition"
+              className="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium border border-black/10 dark:border-white/15 hover:bg-black/5 dark:hover:bg-white/5 transition"
             >
               Contact
             </a>
             <a
               href="/lencho-cv.pdf"
               download="Lencho-Mengistu-CV.pdf"
-              className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium border border-black/10 dark:border-white/15 hover:bg-black/5 dark:hover:bg-white/5 transition"
+              className="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium border border-black/10 dark:border-white/15 hover:bg-black/5 dark:hover:bg-white/5 transition"
             >
               <Download size={18} /> CV
             </a>

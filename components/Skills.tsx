@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { skills, type Skill } from "@/lib/data";
 
@@ -26,9 +28,11 @@ export default function Skills() {
             >
               <div className={`h-8 w-8 flex items-center justify-center rounded-md ${needsLightBg ? 'dark:bg-white/90 p-1' : ''
                 } transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-2`}>
-                <img
+                <Image
                   src={`/icons/${skill.slug}.svg`}
                   alt={skill.name}
+                  width={32}
+                  height={32}
                   className="h-full w-full object-contain"
                 />
               </div>
