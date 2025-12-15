@@ -3,7 +3,7 @@ import { z } from 'zod';
 
 const formSchema = z.object({
   email: z.string().email(),
-  message: z.string().min(1, 'Message is required'),
+  message: z.string().min(1, 'Message is required').refine((val) => val.trim().replace(/[\.,\s]+/g, "").length > 0, "Message must contain actual text"),
 });
 
 export async function POST(req: Request) {

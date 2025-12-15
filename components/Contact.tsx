@@ -9,7 +9,7 @@ import * as z from "zod";
 
 const formSchema = z.object({
   email: z.string().email("Please enter a valid email"),
-  message: z.string().min(1, "Message cannot be empty"),
+  message: z.string().min(1, "Message cannot be empty").refine((val) => val.trim().replace(/[\.,\s]+/g, "").length > 0, "Message must contain actual text"),
 });
 
 type FormValues = z.infer<typeof formSchema>;
