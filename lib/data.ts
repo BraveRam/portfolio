@@ -90,37 +90,64 @@ export const projects: Project[] = [
   
 ];
 
+export type SkillCategory = "all" | "languages" | "frameworks" | "databases" | "tools" | "ai";
+
 export type Skill = {
   name: string;
   slug: string;
+  category: SkillCategory;
 };
+
+export const skillCategories: { value: SkillCategory; label: string }[] = [
+  { value: "all", label: "All" },
+  { value: "languages", label: "Languages" },
+  { value: "frameworks", label: "Frameworks" },
+  { value: "databases", label: "Databases" },
+  { value: "tools", label: "Tools" },
+  { value: "ai", label: "AI" },
+];
 
 export const skills: Skill[] = [
   // Languages
-  { name: "JavaScript", slug: "javascript" },
-  { name: "TypeScript", slug: "typescript" },
-  { name: "Python", slug: "python" },
-  { name: "Rust", slug: "rust" },
+  { name: "HTML", slug: "html", category: "languages" },
+  { name: "CSS", slug: "css", category: "languages" },
+  { name: "JavaScript", slug: "javascript", category: "languages" },
+  { name: "TypeScript", slug: "typescript", category: "languages" },
+  { name: "Python", slug: "python", category: "languages" },
+  { name: "Rust(Nooby)", slug: "rust", category: "languages" },
 
-  // Frameworks & Tools
-  { name: "Next.js", slug: "nextjs" },
-  { name: "React", slug: "react" },
-  { name: "Node.js", slug: "nodejs" },
-  { name: "Bun", slug: "bun" },
-  { name: "Express", slug: "express" },
-  { name: "Hono", slug: "hono" },
-  { name: "TailwindCSS", slug: "tailwind" },
-  { name: "Framer", slug: "framer" },
-  { name: "Redux", slug: "redux" },
-  { name: "MongoDB", slug: "mongodb" },
-  { name: "Supabase", slug: "supabase" },
-  { name: "PostgreSQL", slug: "postgres" },
-  { name: "Neon", slug: "neon" },
-  { name: "Docker", slug: "docker" },
-  { name: "Git", slug: "git" },
-  { name: "Telegram", slug: "telegram" },
-  { name: "Vercel", slug: "vercel" },
-  { name: "Cloudflare", slug: "cloudflare" },
-  { name: "OpenAI", slug: "openai" },
-  { name: "Gemini", slug: "gemini" },
+  // Frameworks
+  { name: "Next.js", slug: "nextjs", category: "frameworks" },
+  { name: "React", slug: "react", category: "frameworks" },
+  { name: "Flask", slug: "flask", category: "frameworks" },
+  { name: "FastAPI", slug: "fastapi", category: "frameworks" },
+  { name: "Node.js", slug: "nodejs", category: "frameworks" },
+  { name: "Bun", slug: "bun", category: "frameworks" },
+  { name: "Express", slug: "express", category: "frameworks" },
+  { name: "Hono", slug: "hono", category: "frameworks" },
+  { name: "TailwindCSS", slug: "tailwind", category: "frameworks" },
+  { name: "Framer", slug: "framer", category: "frameworks" },
+  { name: "Redux", slug: "redux", category: "frameworks" },
+  { name: "Tanstack Query", slug: "tanstack", category: "frameworks" },
+
+  // Databases
+  { name: "MongoDB", slug: "mongodb", category: "databases" },
+  { name: "Supabase", slug: "supabase", category: "databases" },
+  { name: "PostgreSQL", slug: "postgres", category: "databases" },
+  { name: "Neon", slug: "neon", category: "databases" },
+  { name: "Redis", slug: "redis", category: "databases" },
+  { name: "MySQL", slug: "mysql", category: "databases" },
+
+  // Tools
+  { name: "Docker", slug: "docker", category: "tools" },
+  { name: "Git", slug: "git", category: "tools" },
+  { name: "Telegram", slug: "telegram", category: "tools" },
+  { name: "Vercel", slug: "vercel", category: "tools" },
+  { name: "Cloudflare", slug: "cloudflare", category: "tools" },
+
+  // AI
+  { name: "OpenAI", slug: "openai", category: "ai" },
+  { name: "Gemini", slug: "gemini", category: "ai" },
+  { name: "Groq", slug: "groq", category: "ai" },
 ];
+
