@@ -21,7 +21,7 @@ export default function Hero() {
     checkLocation();
   }, []);
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16 snap-start relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-13 snap-start relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div style={{ width: '100%', height: '100%', position: 'relative' }}>
           <LightRays
