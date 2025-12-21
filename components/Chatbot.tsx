@@ -38,7 +38,6 @@ export default function Chatbot() {
 
     return (
         <>
-            {/* Floating Chat Icon */}
             <motion.button
                 onClick={() => setIsOpen(true)}
                 className="fixed bottom-6 right-6 z-50 p-4 rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
@@ -51,7 +50,6 @@ export default function Chatbot() {
                 <BotMessageSquare className="w-6 h-6" />
             </motion.button>
 
-            {/* Chat Dialog */}
             <AnimatePresence>
                 {isOpen && (
                     <>
@@ -63,7 +61,6 @@ export default function Chatbot() {
                             onClick={() => setIsOpen(false)}
                         />
 
-                        {/* Dialog */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -71,7 +68,6 @@ export default function Chatbot() {
                             transition={{ duration: 0.2 }}
                             className="fixed bottom-6 right-6 z-50 w-full md:w-[512px] max-w-[calc(100vw-3rem)] md:max-w-[512px] h-[600px] max-h-[calc(100vh-3rem)] bg-card border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden"
                         >
-                            {/* Header */}
                             <div className="flex items-center justify-between p-4 border-b border-border bg-secondary">
                                 <div className="flex items-center gap-2">
                                     <div className="p-2 rounded-full bg-primary">
@@ -89,7 +85,6 @@ export default function Chatbot() {
                                 </button>
                             </div>
 
-                            {/* Messages */}
                             <div className="flex-1 overflow-y-auto p-4 space-y-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-muted-foreground/30 [&::-webkit-scrollbar-thumb]:rounded-full">
                                 {messages.length === 0 && (
                                     <div className="flex flex-col items-center justify-center h-full gap-6">
@@ -213,11 +208,9 @@ export default function Chatbot() {
                                     </div>
                                 )}
 
-                                {/* Scroll anchor */}
                                 <div ref={messagesEndRef} />
                             </div>
 
-                            {/* Input Form */}
                             <form onSubmit={handleSubmit} className="p-4 border-t border-border bg-background/50">
                                 <div className="flex gap-2">
                                     <input

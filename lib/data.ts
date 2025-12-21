@@ -108,7 +108,6 @@ export const skillCategories: { value: SkillCategory; label: string }[] = [
 ];
 
 export const skills: Skill[] = [
-  // Languages
   { name: "HTML", slug: "html", category: "languages" },
   { name: "CSS", slug: "css", category: "languages" },
   { name: "JavaScript", slug: "javascript", category: "languages" },
@@ -116,7 +115,6 @@ export const skills: Skill[] = [
   { name: "Python", slug: "python", category: "languages" },
   { name: "Rust(Nooby)", slug: "rust", category: "languages" },
 
-  // Frameworks
   { name: "Next.js", slug: "nextjs", category: "frameworks" },
   { name: "React", slug: "react", category: "frameworks" },
   { name: "Flask", slug: "flask", category: "frameworks" },
@@ -130,7 +128,6 @@ export const skills: Skill[] = [
   { name: "Redux", slug: "redux", category: "frameworks" },
   { name: "Tanstack Query", slug: "tanstack", category: "frameworks" },
 
-  // Databases
   { name: "MongoDB", slug: "mongodb", category: "databases" },
   { name: "Supabase", slug: "supabase", category: "databases" },
   { name: "PostgreSQL", slug: "postgres", category: "databases" },
@@ -138,14 +135,12 @@ export const skills: Skill[] = [
   { name: "Redis", slug: "redis", category: "databases" },
   { name: "MySQL", slug: "mysql", category: "databases" },
 
-  // Tools
   { name: "Docker", slug: "docker", category: "tools" },
   { name: "Git", slug: "git", category: "tools" },
   { name: "Telegram", slug: "telegram", category: "tools" },
   { name: "Vercel", slug: "vercel", category: "tools" },
   { name: "Cloudflare", slug: "cloudflare", category: "tools" },
 
-  // AI
   { name: "OpenAI", slug: "openai", category: "ai" },
   { name: "Gemini", slug: "gemini", category: "ai" },
   { name: "Groq", slug: "groq", category: "ai" },

@@ -75,7 +75,6 @@ export default function Contact() {
             I&apos;m available for freelance and full‑time opportunities.
           </p>
           
-          {/* Contact Links */}
           <div className="mt-4 flex flex-wrap gap-3">
             <a
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium bg-foreground text-background"
@@ -131,7 +130,6 @@ export default function Contact() {
             </a>
           </div>
 
-          {/* Contact Form */}
           <div className="mt-8 pt-8 border-t border-black/10 dark:border-white/10">
             <h3 className="text-lg font-medium mb-4">Or send me a message directly</h3>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 max-w-md">

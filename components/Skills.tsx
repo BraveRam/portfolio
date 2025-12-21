@@ -19,7 +19,6 @@ export default function Skills() {
         Skills
       </h2>
 
-      {/* Filter Buttons */}
       <div className="flex flex-wrap gap-2 mb-6">
         {skillCategories.map((category) => (
           <button
@@ -36,7 +35,6 @@ export default function Skills() {
         ))}
       </div>
 
-      {/* Skills Grid */}
       <motion.div
         layout
         className="grid gap-3 grid-cols-4 sm:grid-cols-6 lg:grid-cols-8"

@@ -23,7 +23,6 @@ export default function Nav() {
       setIsScrolled(window.scrollY > 20);
     };
 
-    // Check initial scroll
     handleScroll();
 
     window.addEventListener("scroll", handleScroll);
@@ -63,7 +62,6 @@ function ActualNav({ isScrolled, open, setOpen, activeTab, setActiveTab }: Actua
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Animation variants for desktop
   const variants = {
     top: {
       width: "fit-content",
@@ -103,11 +101,9 @@ function ActualNav({ isScrolled, open, setOpen, activeTab, setActiveTab }: Actua
         }}
         className={cn(
           "flex items-center justify-between backdrop-blur-md shadow-sm border border-black/5 dark:border-white/10 bg-white/70 dark:bg-black/70 overflow-hidden",
-          // Mobile always full width via variable, but lets ensure CSS matches
           isMobile ? "w-full" : ""
         )}
       >
-        {/* Desktop Menu Content */}
         {!isMobile && (
           <div className={cn(
             "hidden md:flex items-center gap-1 transition-all duration-300 w-full whitespace-nowrap",
@@ -160,7 +156,6 @@ function ActualNav({ isScrolled, open, setOpen, activeTab, setActiveTab }: Actua
           </div>
         )}
 
-        {/* Mobile Menu Header */}
         {isMobile && (
           <div className="flex items-center justify-between w-full">
             <span className="font-semibold tracking-tight text-sm">Lencho Mengistu</span>
@@ -200,9 +195,6 @@ function ActualNav({ isScrolled, open, setOpen, activeTab, setActiveTab }: Actua
         )}
       </motion.nav>
 
-      {/* Mobile Menu Dropdown - Rendered outside the nav but inside the fixed container, or separate? 
-          If inside fixed container, it works.
-      */}
       <AnimatePresence>
         {isMobile && open && (
           <motion.div

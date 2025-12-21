@@ -2,7 +2,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import { useState, useEffect } from "react";
-import LiquidEther from "./LiquidEther";
+import LightRays from "./LightRays";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 export default function Hero() {
   const [isEthiopia, setIsEthiopia] = useState(false);
@@ -14,7 +15,6 @@ export default function Hero() {
         const data = await response.json();
         setIsEthiopia(data.isEthiopia);
       } catch {
-        // On error, hide CV button (fail closed for non-Ethiopia)
         setIsEthiopia(false);
       }
     }
@@ -24,22 +24,16 @@ export default function Hero() {
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 snap-start relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div style={{ width: '100%', height: '100%', position: 'relative' }}>
-          <LiquidEther
-            colors={['#5227FF', '#FF9FFC', '#B19EEF']}
-            mouseForce={20}
-            cursorSize={100}
-            isViscous={false}
-            viscous={30}
-            iterationsViscous={32}
-            iterationsPoisson={32}
-            resolution={0.5}
-            isBounce={false}
-            autoDemo={true}
-            autoSpeed={0.5}
-            autoIntensity={2.2}
-            takeoverDuration={0.25}
-            autoResumeDelay={3000}
-            autoRampDuration={0.6}
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#00ffff"
+            raysSpeed={1.5}
+            lightSpread={0.8}
+            rayLength={1.2}
+            followMouse={true}
+            mouseInfluence={0.1}
+            noiseAmount={0.1}
+            distortion={0.05}
           />
         </div>
       </div>
@@ -51,20 +45,6 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-4xl/tight sm:text-5xl/tight font-extrabold tracking-tight"
           >
-            <motion.span
-              className="inline-block origin-bottom"
-              animate={{
-                rotate: [0, 15, -10, 15, 0],
-              }}
-              transition={{
-                duration: 1.2,
-                ease: "easeInOut",
-                repeat: Infinity,
-                repeatDelay: 0.3
-              }}
-            >
-              👋
-            </motion.span>{" "}
             Hi, Lencho here.
           </motion.h1>
 
@@ -116,6 +96,19 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
+      
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+      >
+        <a href="#skills">
+          <InteractiveHoverButton className="text-sm">
+            Scroll Down
+          </InteractiveHoverButton>
+        </a>
+      </motion.div>
     </section >
   );
 }
