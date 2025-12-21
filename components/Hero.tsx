@@ -37,7 +37,7 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto gap-8 relative z-10">
+      <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto gap-8 relative z-10 px-6 sm:px-0">
         <div>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
