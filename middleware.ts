@@ -26,8 +26,8 @@ export default function middleware(req: NextRequest) {
     }
   }
 
-  // If there's a subdomain, rewrite to the subdomain's folder
-  if (subdomain) {
+  // If there's a subdomain (excluding www), rewrite to the subdomain's folder
+  if (subdomain && subdomain !== "www") {
     // Rewrite to /[subdomain]/... path
     // e.g., blogs.localhost:3000/ -> /blogs
     // e.g., blogs.localhost:3000/posts -> /blogs/posts
