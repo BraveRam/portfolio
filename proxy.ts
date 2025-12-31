@@ -18,7 +18,7 @@ export default function middleware(req: NextRequest) {
 
   // Extract subdomain (e.g., "blogs" from "blogs.localhost:3000")
   let subdomain: string | null = null;
-  
+
   for (const domain of allowedDomains) {
     if (hostname.endsWith(`.${domain}`)) {
       subdomain = hostname.replace(`.${domain}`, "");

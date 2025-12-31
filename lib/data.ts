@@ -13,12 +13,19 @@ export const projects: Project[] = [
     slug: "luna",
     title: "Luna",
     description:
-      "AI assistant that helps students plan and organize assignments cleanly.",
-    tags: ["Next.js", "Hono", "PostgreSQL", "Backblaze B2", "Gemini", "Inngest"],
+      "AI-powered platform that helps students plan and organize assignments cleanly.",
+    tags: [
+      "Next.js",
+      "Hono",
+      "PostgreSQL",
+      "Backblaze B2",
+      "Gemini",
+      "Inngest",
+    ],
     image: "/projects/luna.png",
-    site: "https://luna-client-one.vercel.app",
+    site: "https://luna.lencho.dev",
   },
-    {
+  {
     slug: "backblaze-mcp",
     title: "Backblaze MCP",
     description:
@@ -33,24 +40,37 @@ export const projects: Project[] = [
     description: "Awesome file sharing with secure uploads and quick previews.",
     tags: ["Next.js", "Backblaze", "TypeScript", "TailwindCSS", "NeonDB"],
     image: "/projects/pupilfy.png",
-    site: "http://pupilfy.vercel.app"
+    site: "http://pupilfy.lencho.dev",
   },
   {
     slug: "pixn",
     title: "Pixn",
     description: "Fast image hosting with instant uploads and shareable links.",
-    tags: ["Next.js", "TypeScript", "TailwindCSS", "Supabase", "Gemini", "Pgvector"],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Supabase",
+      "Gemini",
+      "Pgvector",
+    ],
     image: "/projects/pixn.png",
-    site: "https://pixn.vercel.app",
+    site: "https://pixn.lencho.dev",
   },
   {
     slug: "coinylive",
     title: "Coinylive",
     description:
       "Live crypto prices with lightweight charts and responsive layout.",
-    tags: ["Next.js", "TypeScript", "Coingecko", "TailwindCSS", "Tanstack query"],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Coingecko",
+      "TailwindCSS",
+      "Tanstack query",
+    ],
     image: "/projects/coinylive-web.png",
-    site: "https://coinylive.vercel.app",
+    site: "https://coinylive.lencho.dev",
   },
   {
     slug: "promptly",
@@ -86,11 +106,16 @@ export const projects: Project[] = [
     tags: ["Telegram Bot API", "Python", "Docker", "PyTelegramBotAPI"],
     image: "/projects/promo-bot.jpg",
     repo: "https://github.com/BraveRam/FasterPostMaker",
-  }
-  
+  },
 ];
 
-export type SkillCategory = "all" | "languages" | "frameworks" | "databases" | "tools" | "ai";
+export type SkillCategory =
+  | "all"
+  | "languages"
+  | "frameworks"
+  | "databases"
+  | "tools"
+  | "ai";
 
 export type Skill = {
   name: string;
@@ -145,4 +170,3 @@ export const skills: Skill[] = [
   { name: "Gemini", slug: "gemini", category: "ai" },
   { name: "Groq", slug: "groq", category: "ai" },
 ];
-
