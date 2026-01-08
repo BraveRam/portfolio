@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lencho",
+  title: "Lencho | Portfolio",
 };
 
 export default function RootLayout({
