@@ -54,7 +54,7 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-2xl/tight sm:text-2xl/tight font-semibold tracking-tight"
           >
-            Full-stack software
+            Full-stack software developer
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 24 }}
