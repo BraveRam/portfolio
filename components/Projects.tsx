@@ -19,9 +19,7 @@ export default function Projects() {
   return (
     <section id="projects" className="container py-16 snap-start">
       <div className="flex items-end justify-between mb-6 mt-20">
-        <h2 className="text-2xl font-semibold tracking-tight">
-          Projects
-        </h2>
+        <h2 className="text-2xl font-semibold tracking-tight">Projects</h2>
         <a href="#contact" className="text-sm hover:opacity-80">
           Open to collaborations →
         </a>
@@ -43,7 +41,7 @@ export default function Projects() {
               className="cursor-pointer"
               onClick={() => {
                 if (cardLink) {
-                  window.open(cardLink, '_blank', 'noopener,noreferrer');
+                  window.open(cardLink, "_blank", "noopener,noreferrer");
                 }
               }}
             >
@@ -88,7 +86,9 @@ export default function Projects() {
                         )}
                       </div>
                     </div>
-                    <p className="mt-2 text-sm text-zinc-500">{p.description}</p>
+                    <p className="mt-2 text-sm text-zinc-500">
+                      {p.description}
+                    </p>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {p.tags.map((t: string) => (
                         <span
@@ -109,4 +109,3 @@ export default function Projects() {
     </section>
   );
 }
-
