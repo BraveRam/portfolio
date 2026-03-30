@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Chatbot from "@/components/Chatbot";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
         >
           <div className="min-h-dvh flex flex-col">
             <Nav />
+            <Toaster />
             <main className="flex-1">{children}</main>
             <footer className="border-t border-black/5 dark:border-white/10">
               <div className="mx-auto max-w-6xl px-6 py-8 text-sm text-zinc-600 dark:text-zinc-400 flex items-center justify-between">

@@ -9,16 +9,16 @@ export default function middleware(req: NextRequest) {
   const hostname = req.headers.get("host") || "";
 
   // Define your allowed domains (add your production domain here too)
-  const allowedDomains = ["localhost:3000", "lencho.dev"];
+  const allowedDomains = ["localhost:3000", "lencho.dev", "lencho.et"];
 
   // Check if hostname matches any allowed pattern or is a subdomain
   const isAllowedDomain = allowedDomains.some(
-    (domain) => hostname === domain || hostname.endsWith(`.${domain}`)
+    (domain) => hostname === domain || hostname.endsWith(`.${domain}`),
   );
 
   // Extract subdomain (e.g., "blogs" from "blogs.localhost:3000")
   let subdomain: string | null = null;
-  
+
   for (const domain of allowedDomains) {
     if (hostname.endsWith(`.${domain}`)) {
       subdomain = hostname.replace(`.${domain}`, "");

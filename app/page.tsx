@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Skills />
+      {/* <Skills /> */}
       <Projects />
       <Contact />
     </>

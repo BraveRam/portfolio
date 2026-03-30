@@ -22,7 +22,7 @@ export const projects: Project[] = [
       "Vercel",
       "Inngest",
     ],
-    image: "/projects/luna.png",
+    image: "/projects/pullora-dash.png",
     site: "https://pullora.chat",
   },
   {

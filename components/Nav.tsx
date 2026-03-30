@@ -8,7 +8,7 @@ import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 
 const navItems = [
   { name: "Lencho", href: "#home" },
-  { name: "Skills", href: "#skills" },
+  // { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
@@ -42,8 +42,6 @@ export default function Nav() {
   );
 }
 
-
-
 interface ActualNavProps {
   isScrolled: boolean;
   open: boolean;
@@ -52,7 +50,13 @@ interface ActualNavProps {
   setActiveTab: (tab: string) => void;
 }
 
-function ActualNav({ isScrolled, open, setOpen, activeTab, setActiveTab }: ActualNavProps) {
+function ActualNav({
+  isScrolled,
+  open,
+  setOpen,
+  activeTab,
+  setActiveTab,
+}: ActualNavProps) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -80,7 +84,7 @@ function ActualNav({ isScrolled, open, setOpen, activeTab, setActiveTab }: Actua
       marginTop: 0,
       borderRadius: 0,
       padding: "12px 16px",
-    }
+    },
   };
 
   return (
@@ -93,22 +97,26 @@ function ActualNav({ isScrolled, open, setOpen, activeTab, setActiveTab }: Actua
         layout
         variants={variants}
         initial="top"
-        animate={isMobile ? "mobile" : (isScrolled ? "scrolled" : "top")}
+        animate={isMobile ? "mobile" : isScrolled ? "scrolled" : "top"}
         transition={{
           type: "tween",
           duration: 0.3,
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
         className={cn(
           "flex items-center justify-between backdrop-blur-md shadow-sm border border-black/5 dark:border-white/10 bg-white/70 dark:bg-black/70 overflow-hidden",
-          isMobile ? "w-full" : ""
+          isMobile ? "w-full" : "",
         )}
       >
         {!isMobile && (
-          <div className={cn(
-            "hidden md:flex items-center gap-1 transition-all duration-300 w-full whitespace-nowrap",
-            isScrolled ? "justify-between max-w-6xl mx-auto" : "justify-center"
-          )}>
+          <div
+            className={cn(
+              "hidden md:flex items-center gap-1 transition-all duration-300 w-full whitespace-nowrap",
+              isScrolled
+                ? "justify-between max-w-6xl mx-auto"
+                : "justify-center",
+            )}
+          >
             {isScrolled && (
               <motion.a
                 initial={{ opacity: 0, x: -20 }}
@@ -132,19 +140,23 @@ function ActualNav({ isScrolled, open, setOpen, activeTab, setActiveTab }: Actua
                       onClick={() => setActiveTab(item.name)}
                       className={cn(
                         "relative px-4 py-2 text-sm font-medium transition-colors duration-200 flex items-center rounded-full outline-none",
-                        isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                        isActive
+                          ? "text-foreground"
+                          : "text-muted-foreground hover:text-foreground",
                       )}
                     >
                       {isActive && (
                         <motion.div
                           layoutId="active-pill"
                           className="absolute inset-0 bg-white dark:bg-white/10 rounded-full shadow-sm"
-                          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 30,
+                          }}
                         />
                       )}
-                      <span className="relative z-10">
-                        {item.name}
-                      </span>
+                      <span className="relative z-10">{item.name}</span>
                     </a>
                   );
                 })}
@@ -158,7 +170,9 @@ function ActualNav({ isScrolled, open, setOpen, activeTab, setActiveTab }: Actua
 
         {isMobile && (
           <div className="flex items-center justify-between w-full">
-            <span className="font-semibold tracking-tight text-sm">Lencho Mengistu</span>
+            <span className="font-semibold tracking-tight text-sm">
+              Lencho Mengistu
+            </span>
             <div className="flex items-center gap-2">
               <AnimatedThemeToggler />
               <button
@@ -216,7 +230,7 @@ function ActualNav({ isScrolled, open, setOpen, activeTab, setActiveTab }: Actua
                     >
                       <span className="font-medium">{item.name}</span>
                     </a>
-                  )
+                  );
                 })}
             </div>
           </motion.div>
