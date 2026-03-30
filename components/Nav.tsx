@@ -162,7 +162,7 @@ function ActualNav({
                 })}
               <div className="w-px h-6 bg-border mx-2" />
               <div className="pl-1 mt-2">
-                <AnimatedThemeToggler />
+                <AnimatedThemeToggler className="cursor-pointer" />
               </div>
             </div>
           </div>
