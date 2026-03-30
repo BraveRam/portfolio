@@ -10,20 +10,20 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "luna",
-    title: "Luna",
+    slug: "pullora",
+    title: "Pullora",
     description:
-      "AI assistant that helps students plan and organize assignments cleanly.",
+      "A fullstack AI powered platform that helps planning and organizing documents cleanly.",
     tags: [
       "Next.js",
       "Hono",
       "PostgreSQL",
       "Backblaze B2",
-      "Gemini",
+      "Vercel",
       "Inngest",
     ],
     image: "/projects/luna.png",
-    site: "https://luna-et.vercel.app",
+    site: "https://pullora.chat",
   },
   {
     slug: "backblaze-mcp",
