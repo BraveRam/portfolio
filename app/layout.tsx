@@ -46,7 +46,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <footer className="border-t border-black/5 dark:border-white/10">
               <div className="mx-auto max-w-6xl px-6 py-8 text-sm text-zinc-600 dark:text-zinc-400 flex items-center justify-between">
-                <p>© 2023 All rights reserved.</p>
+                <p>© 2026 All rights reserved.</p>
                 <a href="#home" className="hover:opacity-80">
                   ↑
                 </a>
