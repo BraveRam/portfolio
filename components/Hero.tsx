@@ -1,26 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
-import { useState, useEffect } from "react";
 import LightRays from "./LightRays";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import BlurText from "./ui/BlurText";
 
 export default function Hero() {
-  const [isEthiopia, setIsEthiopia] = useState(false);
-
-  useEffect(() => {
-    async function checkLocation() {
-      try {
-        const response = await fetch("/api/geo");
-        const data = await response.json();
-        setIsEthiopia(data.isEthiopia);
-      } catch {
-        setIsEthiopia(false);
-      }
-    }
-    checkLocation();
-  }, []);
   return (
     <section
       id="home"
@@ -79,15 +64,13 @@ export default function Hero() {
             >
               Contact
             </a>
-            {isEthiopia && (
-              <a
-                href="/lencho-cv.pdf"
-                download="Lencho-Mengistu-CV.pdf"
-                className="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium border border-black/10 dark:border-white/15 hover:bg-black/5 dark:hover:bg-white/5 transition"
-              >
-                <Download size={18} /> CV
-              </a>
-            )}
+            <a
+              href="/lencho-cv.pdf"
+              download="Lencho-Mengistu-CV.pdf"
+              className="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium border border-black/10 dark:border-white/15 hover:bg-black/5 dark:hover:bg-white/5 transition"
+            >
+              <Download size={18} /> CV
+            </a>
           </motion.div>
         </div>
       </div>
